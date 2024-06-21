@@ -7,7 +7,7 @@
 - ⚡ Fun fact: I will not squander my time fighting entropy for any other cause than the betterment of all humanity...
 
 
-<h1 class="Bob"><a href="https://github.com/josephmisiti/awesome-machine-learning">AI resource</a></h1>
+<h1 class="Bob"><a href="https://github.com/josephmisiti/awesome-machine-learning">AI resources</a></h1>
 
 
 
