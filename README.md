@@ -6,6 +6,8 @@
 - 😄 Pronouns: Proverbs: Proconsonants: Language is amazing!...
 - ⚡ Fun fact: I will not squander my time fighting entropy for any other cause than the betterment of all humanity...
 
+<div style="height: 200px; width: 300px; background-color: green;">Hello World</div>
+
 <!---
 TheCodingJester/TheCodingJester is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
