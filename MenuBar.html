@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+<style>
+
+body {
+background-color: black;
+
+}
+
+.bob {
+position: fixed; top: 300px; left: 500px; background-color: red; height: 150px; width: 150px;
+}
+
+.menu-bar {
+    position: fixed; top: 0px; left: 0px; right: 0px; height: 40px; margin: 0px; display: flex; background-color: black; color: white;
+}
+
+.menu-bar:hover {
+color: red;
+}
+
+.menu {
+  position: relative; padding: 10px 20px; cursor: pointer;
+}
+
+.submenu {
+  display: none; position: absolute; top: 100%; left: 0; background-color: transparent; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submenu a {
+  display: block; padding: 10px 20px; text-decoration: none; color: red; background-color: transparent;
+}
+
+.menu:hover .submenu {
+  display: block;
+}
+
+.side-menu {
+  display: none; position: absolute; top: 0; left: 100%; background-color: transparent; color: red; box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu a {
+  display: block; padding: 10px 20px; text-decoration: none; color: red;
+}
+
+.menu-item:hover {
+    background-color: rgba(36, 34, 34, 0.5);
+}
+
+
+/* Windows */
+.WebDevelopment_content {
+    display: none;
+}
+.WebDevelopment_content.active {
+    display: block; position: fixed; top: 40px; left: 0px; right: 0px; bottom: 0px; margin: 0px;
+    border-style: ridge; border-width: 3px; border-color: red; border-radius: 10px;
+}
+
+
+.HTML_item_content {
+    display: none;
+}
+.HTML_item_content.active {
+    display: block; position: fixed; top: 300px; left: 200px; height: 100px; width: 100px; background-color: white;
+    border-style: ridge; border-width: 3px; border-color: red; border-radius: 10px;
+}
+
+.css_item_content {
+    display: none;
+}
+.css_item_content.active {
+    display: block; position: fixed; top: 300px; left: 400px; height: 100px; width: 100px; background-color: white;
+    border-style: ridge; border-width: 3px; border-color: red; border-radius: 10px;
+}
+
+.JavaScript_item_content {
+    display: none;
+}
+.JavaScript_item_content.active {
+    display: block; position: fixed; top: 300px; left: 600px; height: 100px; width: 100px; background-color: white;
+    border-style: ridge; border-width: 3px; border-color: red; border-radius: 10px;
+}
+
+</style>
+
+</head>
+<body>
+
+    <div class="WebDevelopment_content"></div>
+
+<div class="menu-bar">
+
+  <div class="menu menu-item" id="jesse">
+    Jesse
+    <div class="submenu">
+      <a class="menu-item" href="#" onclick="WebDevelopment()">Web Development</a>
+      <div class="side-menu jesse-side-menu">
+        <a class="menu-item" href="#" onclick="html()">HTML</a>
+        <a class="menu-item" href="#" onclick="css()">CSS</a>
+        <a class="menu-item" href="#" onclick="js()">JavaScript</a>
+      </div>
+      <a class="menu-item" href="#">Juggling</a>
+      <div class="side-menu juggling-side-menu">
+        <a class="menu-item" href="#">Balls</a>
+        <a class="menu-item" href="#">Clubs</a>
+        <a class="menu-item" href="#">Rings</a>
+      </div>
+      <a class="menu-item" href="#">Music</a>
+      <div class="side-menu music-side-menu">
+        <a class="menu-item" href="#">Guitar</a>
+        <a class="menu-item" href="#">Piano</a>
+        <a class="menu-item" href="#">Drums</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu menu-item" id="file">
+    File
+    <div class="submenu">
+      <a class="menu-item" href="#" onclick="MyWindow()">New</a>
+      <div class="side-menu file-side-menu">
+        <a class="menu-item" href="#">Text File</a>
+        <a class="menu-item" href="#">Image File</a>
+        <a class="menu-item" href="#">PDF</a>
+      </div>
+      <a class="menu-item" href="#">Open</a>
+      <div class="side-menu file-side-menu">
+        <a class="menu-item" href="#">Recent Files</a>
+        <a class="menu-item" href="#">Favorites</a>
+        <a class="menu-item" href="#">Downloads</a>
+      </div>
+      <a class="menu-item" href="#">Save</a>
+      <div class="side-menu file-side-menu">
+        <a class="menu-item" href="#">Save As</a>
+        <a class="menu-item" href="#">Export</a>
+      </div>
+    </div>
+  </div>
+  <div class="menu menu-item" id="edit">
+    Edit
+    <div class="submenu">
+      <a class="menu-item" href="#" onclick="MyWindow()">Cut</a>
+      <a class="menu-item" href="#">Copy</a>
+      <a class="menu-item" href="#">Pasting</a>
+    </div>
+  </div>
+
+  <div class="menu menu-item" id="about">
+    About
+    <div class="submenu">
+      <a class="menu-item" href="#" onclick="MyWindow()">This site</a>
+      <a class="menu-item" href="#">The applications</a>
+      <a class="menu-item" href="#">Technical details</a>
+    </div>
+  </div>
+
+
+</div>
+
+<main>
+<div id="Content-import-container"></div>
+
+<div class="HTML_item_content z-index-changeable" id="MYHTML">
+    <h3 style="cursor: pointer; margin-top: 5px;" onclick="html()">HTML</h3>
+    </div>
+
+<div class="css_item_content z-index-changeable" id="css">
+    <h3 style="cursor: pointer; margin-top: 5px;" onclick="css()">CSS</h3>
+</div>
+
+<div class="JavaScript_item_content z-index-changeable" id="js">
+<h3 style="cursor: pointer; margin-top: 5px;" onclick="js()">JavaScript</h3>
+</div>
+
+</main>
+
+<script>
+
+function WebDevelopment() {
+const WebDevelopment_content = document.getElementsByClassName('WebDevelopment_content')[0];
+WebDevelopment_content.classList.toggle("active");
+}
+
+function html() {
+const HTML_item_content = document.getElementsByClassName('HTML_item_content')[0];
+HTML_item_content.classList.toggle("active");
+}
+
+function css() {
+const css_item_content = document.getElementsByClassName('css_item_content')[0];
+css_item_content.classList.toggle("active");
+}
+
+function js() {
+const JavaScript_item_content = document.getElementsByClassName('JavaScript_item_content')[0];
+JavaScript_item_content.classList.toggle("active");
+}
+
+
+
+
+document.querySelectorAll('.menu').forEach(menu => {
+  const submenu = menu.querySelector('.submenu');
+  const menuItems = submenu.querySelectorAll('.menu-item');
+  const sideMenus = submenu.querySelectorAll('.side-menu');
+
+  function showMenu() {
+    submenu.style.display = 'block';
+    sideMenus.forEach(sideMenu => {
+      sideMenu.style.display = 'none';
+    });
+  }
+
+  function hideMenu() {
+    submenu.style.display = 'none';
+    sideMenus.forEach(sideMenu => {
+      sideMenu.style.display = 'none';
+    });
+  }
+
+  menu.addEventListener('mouseenter', () => {
+    showMenu();
+  });
+
+  menu.addEventListener('mouseleave', () => {
+    hideMenu();
+  });
+
+  menuItems.forEach(item => {
+    const sideMenu = item.nextElementSibling;
+    if (sideMenu && sideMenu.classList.contains('side-menu')) {
+
+      item.addEventListener('mouseenter', () => {
+        sideMenus.forEach(sideMenu => {
+          sideMenu.style.display = 'none';
+        });
+        sideMenu.style.display = 'block';
+      });
+
+      sideMenu.addEventListener('mouseenter', () => {
+        sideMenu.style.display = 'block';
+      });
+
+      item.addEventListener('mouseleave', () => {
+        sideMenu.style.display = 'none';
+      });
+
+      sideMenu.addEventListener('mouseleave', () => {
+        sideMenu.style.display = 'none';
+      });
+    }
+
+    item.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  });
+
+  
+  submenu.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+});
+
+function MyWindow() {
+  const MyWindow = document.createElement("div");
+  MyWindow.classList = 'bob';
+  document.body.appendChild(MyWindow);
+}
+
+
+
+makeElementDraggable(document.getElementById('MYHTML'));
+   makeElementDraggable(document.getElementById('css'));
+   makeElementDraggable(document.getElementById('js'));
+
+       function makeElementDraggable(element) {
+       let isDragging = false;
+       let initialX, initialY;
+
+       element.addEventListener('mousedown', aaa);
+       document.addEventListener('mousemove', bbb);
+       document.addEventListener('mouseup', ccc);
+
+       function aaa(e) {
+       if (e.target.classList.contains('miss')) {
+           e.stopPropagation();
+           return;
+       }
+
+       isDragging = true;
+
+       initialX = e.clientX - element.offsetLeft;
+       initialY = e.clientY - element.offsetTop;
+       }
+
+       function bbb(e) {
+         if (!isDragging) return;
+         e.preventDefault();
+
+         let x = e.clientX - initialX;
+         let y = e.clientY - initialY;
+
+
+           element.style.left = x + 'px';
+           element.style.top = y + 'px';
+       }
+
+       function ccc() {
+               isDragging = false;
+       }
+       }
+
+       document.addEventListener('mousedown', function (event) {
+           const clickedElement = event.target.closest('.z-index-changeable');
+
+           if (clickedElement) {
+
+            document.querySelectorAll('.z-index-changeable').forEach(el => {
+                   el.style.zIndex = 500;
+               });
+
+               clickedElement.style.zIndex = 1000;
+           }
+
+       });
+</script>
+</body>
+</html>
