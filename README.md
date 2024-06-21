@@ -7,29 +7,7 @@
 - ⚡ Fun fact: I will not squander my time fighting entropy for any other cause than the betterment of all humanity...
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>TheCodingJester</title>
-<style>
-.Bob {
-  color: red;
-}
-</style>
-
-</head>
-<body>
-<div class="Bob">Hello World</div>
-
-<main>
-
-</main>
-<script>
-
-</script>
-</body>
-</html>
-
+<h1 class="Bob"><a href="https://github.com/josephmisiti/awesome-machine-learning">AI resource</a></h1>
 
 
 
